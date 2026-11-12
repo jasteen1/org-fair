@@ -22,6 +22,7 @@ class OrgBanner extends StatelessWidget {
     return Image.network(
       url,
       fit: BoxFit.cover,
+      webHtmlElementStrategy: WebHtmlElementStrategy.prefer,
       semanticLabel: 'Banner photo of ${org.name}',
       loadingBuilder: (context, child, progress) => progress == null
           ? child
