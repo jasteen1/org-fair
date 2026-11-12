@@ -49,12 +49,12 @@ class SanityEventSource implements EventSource {
     //   Query:   query=<the GROQ query above>
     //            (Uri.https(host, path, {'query': query}) encodes it for you)
     //   Headers: 'Authorization': 'Bearer $token', only when token is not empty
-    final uri = Uri.https('$projectId.apicdn.sanity.io');
-    final headers = <String, String>{};
+    // final uri = Uri.https('$projectId.apicdn.sanity.io');
+    // final headers = <String, String>{};
     // EXPLAIN E3: Open one of the other two CMS files and compare. Which
     // lines differ, and which are the same? Why is the parsing the part
     // that changes most from one CMS to another?
-    final json = await getJson(client, uri, cms: name, headers: headers);
+    // final json = await getJson(client, uri, cms: name, headers: headers); sanity is not the selected CMS.
 
     // TODO 3 (Sanity): Turn the JSON into a List<FairEvent>.
     //   The list is in json['result']. Use _id as the id.

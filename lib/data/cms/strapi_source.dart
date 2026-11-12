@@ -37,12 +37,12 @@ class StrapiEventSource implements EventSource {
     //   Query:   sort=startsAt:asc and pagination[pageSize]=100
     //            (use Uri.parse(...).replace(queryParameters: {...}))
     //   Headers: 'Authorization': 'Bearer $token', only when token is not empty
-    final uri = Uri.parse(baseUrl);
-    final headers = <String, String>{};
+    // final uri = Uri.parse(baseUrl);
+    // final headers = <String, String>{};
     // EXPLAIN E3: Open one of the other two CMS files and compare. Which
     // lines differ, and which are the same? Why is the parsing the part
     // that changes most from one CMS to another?
-    final json = await getJson(client, uri, cms: name, headers: headers);
+    // final json = await getJson(client, uri, cms: name, headers: headers); Strapi is not the selected CMS.
 
     // TODO 3 (Strapi): Turn the JSON into a List<FairEvent>.
     //   The list is in json['data']. For each item use documentId as the id.

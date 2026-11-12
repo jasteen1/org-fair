@@ -65,7 +65,7 @@ class ContentfulEventSource implements EventSource {
     //while parsing differs most because each CMS returns data in a
     // different JSON structure.
     final json = await getJson(client, uri, cms: name, headers: headers);
-    print('CONTENTFUL RESPONSE: $json');
+    // print('CONTENTFUL RESPONSE: $json');
 
     // TODO 3 (Contentful): Turn the JSON into a List<FairEvent>.
     //   The list is in json['items']. The id is in item['sys']['id'];
@@ -76,7 +76,7 @@ class ContentfulEventSource implements EventSource {
 
     return entries.map((item) {
      final entry = item as Map<String, dynamic>;
-      print('CONTENTFUL ENTRY: $entry');
+      // print('CONTENTFUL ENTRY: $entry');
 
 final fields = entry['fields'] as Map<String, dynamic>;
 final sys = entry['sys'] as Map<String, dynamic>;
